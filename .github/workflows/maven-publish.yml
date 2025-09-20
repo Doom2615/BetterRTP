@@ -21,7 +21,7 @@ jobs:
     - name: Setup workspace
       run: mkdir artifacts
     - name: Build with Maven
-      run: mvn -B release --file pom.xml
+      run: mvn -B clean install --file pom.xml
       
     - name: Upload the artifacts
       uses: skx/github-action-publish-binaries@master
